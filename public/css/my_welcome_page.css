@@ -1,4 +1,6 @@
-html
+body{
+	background-color: black;
+}
 
 
 header .header-content .header-content-inner p {
@@ -18,19 +20,11 @@ header .header-content .header-content-inner p {
 	background-color: #EAEAEA;
 }
 
-#contact > div > div > div:nth-child(3) > p > a {
-	color: #003D5;
-}
-
-#mainNav > div > div.navbar-header > a {
-	color: #003D5;
-}
-
 #resume {
 	background-color: #63789D;
 	color: #D6D6D6;
 }
-.active{
 
+#contact{
+	background-color: white;
 }
-
