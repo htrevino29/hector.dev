@@ -1,0 +1,19 @@
+.simonDiv{
+	background-color: #16374F;
+	color: white;
+}
+.calcDiv{
+	background-color: #222222;
+	color: white;
+}
+.mapDiv{
+	background-color: #63789D;
+	color: white;
+}
+body{
+	background-color: black;
+}
+.btn{
+	border-radius: 25px;
+
+}
