@@ -1,0 +1,42 @@
+button{
+	 background-color: #627C85; 
+    border: none;
+    color: #A2E8DD;
+    padding: 30px 45px;
+    height: 15px;
+    width: 15px;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px;
+    border-radius: 8px;
+    line-height: 5px;
+}  
+ .bottomRow{
+ 	padding: 30px 35px;
+}
+body{
+	text-align: center;
+	margin: 12em;
+    background-color: #35524A;
+}
+#LeftBox{
+    width: 160px;
+    background-color: #779CAB;
+    color: #A2E8DD;  
+}
+#MiddleBox{
+    width: 50px;
+    background-color: #779CAB;
+    color: #A2E8DD;
+    
+}
+#RightBox{
+    width: 160px;
+    background-color: #779CAB;
+    color: #A2E8DD;
+    
+}
+

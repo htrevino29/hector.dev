@@ -1,0 +1,55 @@
+body{
+	background-color:#84A98C;
+}
+#threeBoxes{
+	margin-left: 230px;
+}
+
+
+#todaysWeather {
+	background-color: #CAD2C5;
+	width: 200px;
+	height: 200px;
+	border: solid;
+	border-radius: 5px;
+	margin:5px;
+
+
+
+}
+#tomorrow {
+	background-color: #CAD2C5;	
+	width: 200px;
+	height: 200px;
+	border: solid;
+	border-radius: 5px;
+	margin:5px;
+	
+}
+#dayAfter {
+	background-color: #CAD2C5;
+	width: 200px;
+	height: 200px;
+	border: solid;
+	border-radius: 5px;
+	margin:5px;
+	
+}
+
+
+#latitude {
+	height: 25px;
+	width: 200px;
+	margin: 10px;
+}
+#longitude {
+	height: 25px;
+	width: 200px;
+	margin: 10px;
+
+}
+#map-canvas {
+	box-shadow: 10px 10px 5px #2E4436;
+	margin-left: 10px;
+    width: 615px;
+    height: 300px;
