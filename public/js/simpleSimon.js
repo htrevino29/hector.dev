@@ -24,7 +24,7 @@ console.log("linked");
 	  $(idSelector).animate({
 	  	opacity:'1'
 	  	},300).animate({
-	  	opacity:'0.5'
+	  	opacity:'0.2'
 	  	},300)
 	  	
 	};
