@@ -8,11 +8,11 @@ h1{
 
 
 #board {
-	/*background-color: black;*/
+	background-color: #999;
 	border-style: solid;
 	border: black;
 	margin-top: 5%;
-	margin-left: 35%;
+	/*margin-left: 35%;*/
 	
 
    
@@ -21,11 +21,17 @@ h1{
 	background-color: #F45B69;
 	height:250px;
 	width:250px;
+	display:block;
 	float:left;
+	overflow:hidden;
 	opacity: 0.2;
 	border: solid;
 	border-color: black;
+	margin: 2px;
+	border-radius: 30px;
+	
 
+	
 	
 	
 }
@@ -33,10 +39,14 @@ h1{
 	background-color: #B6D094;
 	height:250px;
 	width:250px;
+	display:block;
 	float:left;
+	overflow:hidden;
 	opacity: 0.2;
 	border: solid;
 	border-color: black;
+	margin: 2px;
+	border-radius: 30px;
 
 	
 }
@@ -44,10 +54,14 @@ h1{
 	background-color: #FFD151;
 	height:250px;
 	width:250px;
+	display:block;
 	float:left;
+	overflow:hidden;
 	opacity: 0.2;
 	border: solid;
 	border-color: black;
+	margin: 2px;
+	border-radius: 30px;
 
 	
 	
@@ -56,17 +70,39 @@ h1{
 	background-color: #3993DD;
 	height:250px;
 	width:250px;
+	display:block;
 	float:left;
+	overflow:hidden;
 	opacity: 0.2;
 	border: solid;
 	border-color: black;
+	margin: 2px;
+	border-radius: 30px;
+}
 
-	
+.linebreak{
+	clear:both;
+}
+.bigBoard {
+	margin-top: 10%;
 }
 
 #start{
 	max-width: 100px;
-	margin: 10px;
-
-	
+	background-color: #f8f8f8;
+	color: black;
+	border-color: #f8f8f8;
+	border-radius: 15px;
+	font-family: 'VT323', monospace;
+	font-size: 14px;	
+}
+#start:hover {
+	background-color: #aaa;
+	color: white;
+	font-family: 'VT323', monospace;
+	font-size: 14px;
+}
+p {
+	font-family: 'VT323', monospace;
+	font-size: 25px;
 }
