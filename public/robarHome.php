@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,27 @@
   <link rel="stylesheet" href="../css/mainRobar.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  // <script type="text/javascript">
+
+        $('#reg-form').submit(function(e){ 
+            e.preventDefault(); // Prevent Default Submission
+            $.ajax({
+         url: 'mailer.php',
+         type: 'POST',
+         data: $(this).serialize(), // it will serialize the form data
+                dataType: 'html'
+            })
+            .done(function(data){
+             $('#form-content').fadeOut('slow', function(){
+                  $('#form-content').fadeIn('slow').html(data);
+                });
+             console.log(data);
+            })
+            .fail(function(){
+         alert('Submit Failed ...'); 
+            });
+        });
+  //     </script>
 </head>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -22,7 +44,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="homeRobar.html">
+      <a class="navbar-brand" href="robarHome.php">
         <img class="navbarLogo" alt="Brand" src="../img/RobarLogo.png">
       </a>
     </div>
@@ -31,10 +53,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <!-- <li><a href="aboutUs.html">About Us </a></li> -->
-        <li><a href="servicesRobar.html">Services</a></li>
-        <li><a href="socialMediaRobar.html">Social Media</a></li>
-        <li><a href="contactUsRobar.html">Contact Us</a></li>
-        <li><a href="latestNewsRobar.html">Testimonials</a></li>
+        <li><a href="servicesRobar.php">Services</a></li>
+        <li><a href="socialMediaRobar.php">Social Media</a></li>
+        <li><a href="contactUsRobar.php">Contact Us</a></li>
+        <li><a href="latestNewsRobar.php">Testimonials</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -64,14 +86,7 @@
             <p>Our first priority is the homeowner. We hope that our web site provides you with all the information about our process. If you have any questions please contact us.
               <br>
               In business for over 10 years we have competitive pricing and will design your dream home, for any budget. Our design process is provided at no cost to you.
-              <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              
             </p>
           </div>
       </div>
@@ -89,16 +104,23 @@
         <div class="modal-body">
           <div class="row">
             <!-- <div class="col-md-6 col-md-offset-3"> -->
-            <div class="col-xs-10 col-xs-offset-1">
-              <form class="form-horizontal" action="" method="post">
+            <div id="form-content" class="col-xs-10 col-xs-offset-1">
+              <form id="reg-form"class="form-horizontal" method="post">
                 <fieldset>
                   <!-- <legend class="text-center">Contact us</legend> -->
 
                   <!-- Name input-->
                   <div class="form-group">
-                    <label class="col-md-3 control-label" for="name">Name</label>
+                    <label class="col-md-3 control-label" for="name">First Name</label>
                     <div class="col-md-9">
-                      <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                      <input id="name" name="first_name" type="text" placeholder="Your First name" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label" for="name">Last Name</label>
+                    <div class="col-md-9">
+                      <input id="name" name="last_name" type="text" placeholder="Your Last name" class="form-control">
                     </div>
                   </div>
 
@@ -106,7 +128,14 @@
                   <div class="form-group">
                     <label class="col-md-3 control-label" for="email">Your E-mail</label>
                     <div class="col-md-9">
-                      <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+                      <input id="email" name="email" type="text" placeholder="Your Email" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label" for="name">Telephone</label>
+                    <div class="col-md-9">
+                      <input id="name" name="telephone" type="text" placeholder="Your Number" class="form-control">
                     </div>
                   </div>
 
@@ -114,7 +143,7 @@
                   <div class="form-group">
                     <label class="col-md-3 control-label" for="message">Your message</label>
                     <div class="col-md-9">
-                      <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                      <textarea class="form-control" id="message" name="comments" placeholder="Please enter your message here..." rows="5"></textarea>
                     </div>
                   </div>
 
@@ -122,18 +151,20 @@
                   <div class="form-group">
                     <div class="col-md-12 text-right">
                       <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Submit</button>
-                      <!-- <button type="submit" class="btn btn-primary btn-lg">Submit</button> -->
+                   
+                      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                     </div>
                   </div>
                 </fieldset>
-              </form>
+              </form>              
             </div>
           </div>                  
         </div>
       </div>
     </div>
   </div>
+        <!-- Modal -->
+     
 
 </body>
 <footer>
@@ -152,7 +183,7 @@
             <ul>
        <!--        <li><i class="fa fa-lg fa-phone" aria-hidden="true"></i><span class="footerSubTitle"> Phone:</span><a href="tel:555-555-5555">  210.111.1111</a> </li>
               <li><i class="fa fa-lg fa-fax" aria-hidden="true"></i><span class="footerSubTitle"> Fax:</span><a href="tel:555-555-5555">210.111.1234 </a> </li> -->
-              <li><i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i><span class="footerSubTitle"> Email:</span><a href="mailto:htrevino29@gmail.com?Subject=Hello%20again">robarinc@gmail.com</a> </li>
+              <li><a href="#" data-toggle="modal" data-target="#contactUsModal"><i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i><span class="footerSubTitle"> Email:<br>robarinc@gmail.com</span></a></li>
               <li><i class="fa fa-lg fa-user-circle" aria-hidden="true"></i> <span class="footerSubTitle"> 24/7 Support:</span> <a href="tel:555-555-5555">210.889.9618</a> </li>
             </ul>
           </div>
@@ -165,7 +196,7 @@
                       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <h3 class="footerTitle"> Location </h3>
                         <ul>
-                          <li><span class="footerSubTitle">Main Office</span><br> <a href="#">111 address  <br> Floresville TX <br> 78114   </a> </li>
+                          <li><span class="footerSubTitle">Main Office</span><br> <a href="#"> Floresville TX </a> </li>
                         
                         <!-- li> <a href="#"> San Antonio Tx</a> </li>
                         <li> <a href="#"> 78217</a> </li> -->

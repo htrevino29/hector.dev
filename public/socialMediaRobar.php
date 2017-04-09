@@ -9,6 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/mainRobar.css">
+  <link rel="stylesheet" href="../css/social.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
 </head>
@@ -22,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="homeRobar.html">
+      <a class="navbar-brand" href="robarHome.php">
         <img class="navbarLogo" alt="Brand" src="../img/RobarLogo.png">
       </a>
     </div>
@@ -30,113 +31,47 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <!-- <li><a href="aboutUs.html">About Us </a></li> -->
-        <li><a href="servicesRobar.html">Services</a></li>
-        <li><a href="socialMediaRobar.html">Social Media</a></li>
-        <li><a href="contactUsRobar.html">Contact Us</a></li>
-        <li><a href="latestNewsRobar.html">Testimonials</a></li>
+        <!-- <li><a href="aboutUs.php">About Us </a></li> -->
+        <li><a href="servicesRobar.php">Services</a></li>
+        <!-- <li><a href="latestNews.php">Latest News</a></li> -->
+        <li class="active"><a href="socialMediaRobar.php">Social Media <span class="sr-only">(current)</span></a></li>
+        <li><a href="contactUsRobar.php">Contact Us</a></li>
+        <li><a href="latestNewsRobar.php">Testimonials</a></li>
+        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 <body>
-
-
   <div class="navFiller"></div>
-
   <div class="container-fluid banner">
-    <div class="jumbotron text-center">
+    <div class="jumbotron socialTron text-center">
 
-      <h1>Welcome</h1> 
-          
-      <p>Our main goal is to transform your dream into a home that will make you proud of choosing us as your builder. We provide our clients with professionalism and quality construction through out the building process and at the same time always be available to answer any questions you might have, any time of day or night and weekends. There are no jobs too big or small and we will provide customer satisfaction with every job we take.</p>
-        
+      <h1>Follow Us </h1> 
+      <div class="col-md-12">
+        <ul class="social-network social-circle">
+
+          <li><a href="https://www.facebook.com/RobarCustomHomesInc/" class="icoFacebook ico" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" class="icoTwitter ico" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" class="icoGoogle ico" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#" class="icoLinkedin ico" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+        </ul>       
+      </div>
+      <p>RoBar Custom Homes is on all of your favorite social media networks.<p>    
       </div>   
     </div>
-
-    <div class="container-fluid indexBody">
+    <!-- <div class="container-fluid indexBody">
       <div id="aboutUs">
-        <div class="col-md-6 aboutUsDiv1">
-          <img class="placeHolderImg" src="../img/home1.jpg">
-        </div>
-        <div class="col-xs-12 col-md-6 aboutUsDiv1">
-          <h1>About Us</h1>
-            <p>Our first priority is the homeowner. We hope that our web site provides you with all the information about our process. If you have any questions please contact us.
-              <br>
-              In business for over 10 years we have competitive pricing and will design your dream home, for any budget. Our design process is provided at no cost to you.
-              <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <h4>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in rid est laborum.</h4>
           </div>
-      </div>
-    </div>
-
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <h1 class="modal-title text-center" id="ModalLabel">Contact Us</h1> 
-      <p class="text-center">Let Us know about your Next Project Ideas.</p>
-        <div class="modal-body">
-          <div class="row">
-            <!-- <div class="col-md-6 col-md-offset-3"> -->
-            <div class="col-xs-10 col-xs-offset-1">
-              <form class="form-horizontal" action="" method="post">
-                <fieldset>
-                  <!-- <legend class="text-center">Contact us</legend> -->
-
-                  <!-- Name input-->
-                  <div class="form-group">
-                    <label class="col-md-3 control-label" for="name">Name</label>
-                    <div class="col-md-9">
-                      <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
-                    </div>
-                  </div>
-
-                  <!-- Email input-->
-                  <div class="form-group">
-                    <label class="col-md-3 control-label" for="email">Your E-mail</label>
-                    <div class="col-md-9">
-                      <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
-                    </div>
-                  </div>
-
-                  <!-- Message body -->
-                  <div class="form-group">
-                    <label class="col-md-3 control-label" for="message">Your message</label>
-                    <div class="col-md-9">
-                      <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
-                    </div>
-                  </div>
-
-                  <!-- Form actions -->
-                  <div class="form-group">
-                    <div class="col-md-12 text-right">
-                      <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Submit</button>
-                      <!-- <button type="submit" class="btn btn-primary btn-lg">Submit</button> -->
-                    </div>
-                  </div>
-                </fieldset>
-              </form>
-            </div>
-          </div>                  
         </div>
-      </div>
-    </div>
-  </div>
-
-</body>
-<footer>
+      </div> -->
+    </body>
+    <footer>
   <div class="footer" id="footer">
     <div class="container">
       <div class="row">
@@ -153,7 +88,7 @@
        <!--        <li><i class="fa fa-lg fa-phone" aria-hidden="true"></i><span class="footerSubTitle"> Phone:</span><a href="tel:555-555-5555">  210.111.1111</a> </li>
               <li><i class="fa fa-lg fa-fax" aria-hidden="true"></i><span class="footerSubTitle"> Fax:</span><a href="tel:555-555-5555">210.111.1234 </a> </li> -->
               <li><i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i><span class="footerSubTitle"> Email:</span><a href="mailto:htrevino29@gmail.com?Subject=Hello%20again">robarinc@gmail.com</a> </li>
-              <li><i class="fa fa-lg fa-user-circle" aria-hidden="true"></i> <span class="footerSubTitle"> 24/7 Support:</span> <a href="tel:555-555-5555">210.889.9618</a> </li>
+              <li><i class="fa fa-lg fa-user-circle" aria-hidden="true"></i> <span class="footerSubTitle"> 24/7 Support:</span> <a href="tel:555-555-5555">210.111.1111</a> </li>
             </ul>
           </div>
                <!--  <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
@@ -203,6 +138,6 @@
           </div>
           <!--/.footer-bottom--> 
         </footer>
-        </html>
+      </html>
 
 
