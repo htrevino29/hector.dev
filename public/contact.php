@@ -1,3 +1,53 @@
+<?php
+
+// configure
+$from = 'Robar Custom Homes User Info';
+$sendTo = 'htrevino29@gmail.com';
+$subject = 'New message from contact form';
+$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in the email
+$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
+$errorMessage = 'There was an error while submitting the form. Please try again later';
+
+// let's do the sending
+
+try
+{
+    $emailText = "You have new message from contact form\n=============================\n";
+
+    foreach ($_POST as $key => $value) {
+
+        if (isset($fields[$key])) {
+            $emailText .= "$fields[$key]: $value\n";
+        }
+    }
+
+    $headers = array('Content-Type: text/plain; charset="UTF-8";',
+        'From: ' . $from,
+        'Reply-To: ' . $from,
+        'Return-Path: ' . $from,
+    );
+    
+    mail($sendTo, $subject, $emailText, implode("\n", $headers));
+
+    $responseArray = array('type' => 'success', 'message' => $okMessage);
+}
+catch (\Exception $e)
+{
+    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
+}
+
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $encoded = json_encode($responseArray);
+
+    header('Content-Type: application/json');
+
+    echo $encoded;
+}
+else {
+    echo $responseArray['message'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +73,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="homeRobar.html">
+      <a class="navbar-brand" href="robarHome.php">
         <img class="navbarLogo" alt="Brand" src="../img/RobarLogo.png">
       </a>
     </div>
@@ -31,12 +81,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <!-- <li><a href="aboutUs.html">About Us </a></li> -->
-        <li><a href="servicesRobar.html">Services</a></li>
-        <!-- <li><a href="latestNews.html">Latest News</a></li> -->
-        <li class="active"><a href="socialMediaRobar.html">Social Media <span class="sr-only">(current)</span></a></li>
-        <li><a href="contactUsRobar.html">Contact Us</a></li>
-        <li><a href="latestNewsRobar.html">Testimonials</a></li>
+        <!-- <li><a href="aboutUs.php">About Us </a></li> -->
+        <li><a href="servicesRobar.php">Services</a></li>
+        <!-- <li><a href="latestNews.php">Latest News</a></li> -->
+        <li class="active"><a href="socialMediaRobar.php">Social Media <span class="sr-only">(current)</span></a></li>
+        <li><a href="contactUsRobar.php">Contact Us</a></li>
+        <li><a href="latestNewsRobar.php">Testimonials</a></li>
         
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -46,7 +96,7 @@
   <div class="navFiller"></div>
   <div class="container-fluid banner">
     <div class="jumbotron socialTron text-center">
-
+      <h1>Thank you For contacting us! we will be in touch soon.</h1>
       <h1>Follow Us </h1> 
       <div class="col-md-12">
         <ul class="social-network social-circle">
