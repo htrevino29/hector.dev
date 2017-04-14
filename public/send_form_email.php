@@ -144,7 +144,11 @@ $headers = 'From: '.$email_from."\r\n".
 <!-- include your own success html here -->
  
  
-Thank you for contacting us. We will be in touch with you very soon.
+
+<center>
+    <h3>Thank you for contacting us. We will be in touch with you very soon.</h3>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+</center>
 
  
  
