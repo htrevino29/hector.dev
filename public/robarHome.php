@@ -38,7 +38,7 @@
              $('#form-content2').fadeOut('slow', function(){
                   $('#form-content2').fadeIn('slow').html(data);
                 });
-             console.log(data);
+             console.log("sent");
             })
             .fail(function(){
          alert('Submit Failed ...'); 
