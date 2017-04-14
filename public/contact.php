@@ -30,6 +30,7 @@ try
     mail($sendTo, $subject, $emailText, implode("\n", $headers));
 
     $responseArray = array('type' => 'success', 'message' => $okMessage);
+   
 }
 catch (\Exception $e)
 {
