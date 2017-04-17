@@ -18,6 +18,31 @@
    <!-- script src="contact.js"></script> -->
   <!-- Magnific Popup core JS file -->
   <script src="magnific-popup/jquery.magnific-popup.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    
+        $('#reg-form').submit(function(e){
+  
+            e.preventDefault(); // Prevent Default Submission
+          
+            $.ajax({
+         url: 'send_form_email.php',
+         type: 'POST',
+         data: $(this).serialize(), // it will serialize the form data
+                dataType: 'html'
+            })
+            .done(function(data){
+             $('#form-content2').fadeOut('slow', function(){
+                  $('#form-content2').fadeIn('slow').html(data);
+                });
+             console.log("sent");
+            })
+            .fail(function(){
+         alert('Submit Failed ...'); 
+            });
+        });
+  });
+  </script>
 
 </head>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -56,7 +81,7 @@
       <h1>Ready to get started?</h1> 
       <p>Click below and let us know how we can help you today!<p>    
 
-        <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#contactUsModal">
+        <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
           Contact Us
         </button>
         
@@ -66,7 +91,7 @@
     <div class="container-fluid indexBody">
       <div id="aboutUs">
 
-        <div class="col-md-6 col-md-offset-3 text-center">
+        <!-- <div class="col-md-6 col-md-offset-3 text-center">
 
           <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -77,96 +102,77 @@
 
 
 
-          </div>
+          </div> -->
 
 
         </div>
 
       </div>
 
-     <!-- Modal -->
-<div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <!-- <h2 class="modal-title text-center" id="ModalLabel">Contact Us</h2>  -->
-      <h1 class="text-center">Ready To start your next project?</h1>
-      <h3 class="text-center">Let Us know about your Project Idea.</h3>
+          <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content col-xs-12 col-md-8 col-md-offset-2">
+        <div class="modal-header">
+    
+          <h4 class="modal-title text-center">Contact Us</h4>
+          <h5 class="text-center"> Have a project in mind tell us more!</h5> 
+
+
+        </div>
+      
         <div class="modal-body">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2">
+          <!-- <p>Some text in the modal.</p> -->
+          <div id="form-content2">
+               <form method="post" id="reg-form" autocomplete="off">
 
-                  
+                <div>
+                  <!-- <p class="text-center" style="font-size:70%;">Register to begin designing your home</p> -->
+                </div>
+             
+               <div class="form-group">
+               <input type="text" class="form-control inputSpace" name="first_name" id="fname" placeholder="First Name" required />
+               </div>
 
+               <div class="form-group">
+               <input type="text" class="form-control inputSpace" name="last_name" id="lname" placeholder="Last Name" required />
+               </div>             
+               
+               <div class="form-group">
+               <input type="text" class="form-control inputSpace" name="email" id="email" placeholder="Your Email" required />
+               </div>
                    
+               <div class="form-group">
+               <input type="text" class="form-control inputSpace" name="telephone" id="phone" placeholder="Phone Number" required />
+               </div>
+                 
+               <div class="form-group">
+               <textarea type="textarea" class="form-control" name="comments" id="comment" placeholder="Comments"></textarea>
+               </div>
 
-                    <form id="contact-form" method="post" action="contact.php" role="form">
+               <hr/>
+                  
+               <div class="form-group">
+               <!-- <button type="submit" name="submit" value="Submit" class="btn">Submit</button> -->
+               <button class="btn btn-primary formSub">Send</button> 
 
-                        <div class="messages"></div>
+                     
+               </div>
+              
+              </form>     
+          </div>  
 
-                        <div class="controls">
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form_name">Firstname *</label>
-                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form_lastname">Lastname *</label>
-                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form_email">Email *</label>
-                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form_phone">Phone</label>
-                                        <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="form_message">Message *</label>
-                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <input type="submit" class="btn btn-primary btn-send" value="Send message">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <p class="text-muted"><strong>*</strong> These fields are required.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </form>
-
-              </div>
-            
-          </div>                  
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button> -->
         </div>
       </div>
+      
     </div>
   </div>
-        <!-- /Modal -->
+    <!-- end modal -->
      
 
 
@@ -187,7 +193,7 @@
             <ul>
        <!--        <li><i class="fa fa-lg fa-phone" aria-hidden="true"></i><span class="footerSubTitle"> Phone:</span><a href="tel:555-555-5555">  210.111.1111</a> </li>
               <li><i class="fa fa-lg fa-fax" aria-hidden="true"></i><span class="footerSubTitle"> Fax:</span><a href="tel:555-555-5555">210.111.1234 </a> </li> -->
-              <li><a href="#" data-toggle="modal" data-target="#contactUsModal"><i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i><span class="footerSubTitle"> Email:<br>robarinc@gmail.com</span></a></li>
+              <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i><span class="footerSubTitle"> Email:<br>robarinc@gmail.com</span></a></li>
               <li><i class="fa fa-lg fa-user-circle" aria-hidden="true"></i> <span class="footerSubTitle"> 24/7 Support:</span> <a href="tel:555-555-5555">210.889.9618</a> </li>
             </ul>
           </div>

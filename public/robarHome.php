@@ -118,7 +118,7 @@
       <div class="modal-content col-xs-12 col-md-8 col-md-offset-2">
         <div class="modal-header">
     
-          <h4 class="modal-title text-center">Contact Form</h4> 
+          <h4 class="modal-title text-center">Contact Us</h4> 
 
 
         </div>
@@ -156,7 +156,7 @@
                   
                <div class="form-group">
                <!-- <button type="submit" name="submit" value="Submit" class="btn">Submit</button> -->
-               <button class="btn btn-primary formSub">Start</button> 
+               <button class="btn btn-primary formSub">Send</button> 
 
                      
                </div>
@@ -208,7 +208,7 @@
                     <div class="col-lg-3  col-md-3 col-sm-3 col-xs-12 ">
                       <h3 class="footerTitle"> Follow Us</h3>                 
                       <ul class="social ">
-                        <li> <a href="https://www.facebook.com/RobarCustomHomesInc/"> <i class="fa fa-facebook"> </i>   </a> </li>
+                        <li> <a href="https://www.facebook.com/RobarCustomHomesInc/"> <i class="fa fa-facebook aFix"> </i>   </a> </li>
                        <!--  <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
                         <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li> -->
                         <!-- <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>   -->                     

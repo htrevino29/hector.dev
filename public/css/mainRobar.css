@@ -46,6 +46,10 @@ body {
     margin-bottom: 5px;
   
 }*/
+.aFix {
+	margin-top: 7px !important;
+	margin-left: 0px !important;
+}
 .banner {
 	padding-left: 0px;
 	padding-right: 0px;
@@ -60,7 +64,8 @@ body {
 }
 .jumbotron {
 	margin-bottom: 0px;
-	background-color: #9DB4C0;
+	background-color: #F4F4F6;
+	/*background-color: #9DB4C0;*/
 	border-radius: 0px !important;	
 
 }
@@ -85,8 +90,8 @@ body {
 }
 .indexBody {
 	padding:30px;
-	/*background-color: #C2DFE3;*/
-	background-color: #b1cbce;
+	background-color: #E6E6E9;
+	/*background-color: #b1cbce;*/
 }
 .navTitle {
 	background-color: maroon;
@@ -131,6 +136,9 @@ body {
 .footerSubTitle {
 	font-size: 16px;
 }
+.hr {
+	border-top: 1px solid #000;
+}
 
 
 /*footer*/
@@ -145,8 +153,9 @@ body {
 	display: block;
 }
 .footer {
-	/*background: #EDEFF1;*/
-	background: #5C6B73;
+	background: #8E8E8E;
+
+	/*background: #5C6B73;*/
 	height: auto;
 	padding-bottom: 30px;
 	position: relative;
@@ -156,6 +165,7 @@ body {
 }
 .footer p {
 	margin: 0;
+	color:white !important;
 }
 .footer img {
 	max-width: 100%;
@@ -164,7 +174,8 @@ body {
 	/*border-bottom: 1px solid #BAC1C8;*/
 	border-bottom: 1px solid black;
 	/*color: #54697E;*/
-	color: black;
+	/*color: black;*/
+	color:white;
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 27px;
@@ -172,6 +183,7 @@ body {
 	text-transform: uppercase;
 }
 .footer ul {
+	color:white !important;
 	font-size: 13px;
 	list-style-type: none;
 	margin-left: 0;
@@ -183,10 +195,12 @@ body {
 .footer ul li a {
 	padding: 0 0 5px 0;
 	display: block;
+	color:white !important;
 }
 .footer a {
 	/*color: #78828D*/
-	color: black;
+	/*color: black;*/
+	color:white !important;
 }
 .supportLi h4 {
 	font-size: 20px;
