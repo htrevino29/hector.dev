@@ -1,0 +1,207 @@
+body {
+	background-color: white !important;
+	/*font-family: 'Space Mono', monospace;*/
+	font-family: 'Special Elite', cursive;
+}
+
+/*body::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}*/
+
+a:hover {
+	text-decoration:none;
+}
+
+a:visited{
+  color:black;
+}
+a {
+	color:black;
+}
+#aboutImg {
+	max-width: 300px;
+	max-height: 400px;
+}
+.clicky:hover {
+	color:white;
+	text-decoration:none;
+}
+ 
+/*top space*/
+.topSpace {
+	height:15vh;
+}
+
+/*logo*/
+.logo {
+	background-color: red;
+	/*background-color: #64A19A;*/
+    color: white;
+    height: 1.3em;
+    font-size: 1em;
+    padding: 5px;
+    font-family: 'Space Mono', monospace;
+
+
+}
+/*#para1 {
+	color:white;
+}*/
+
+.clock {
+	color:black;
+	height:1.3em;
+	font-size: 1.8em;
+	padding: 3px;
+	margin-top: 5px;
+	margin-bottom: 25px;
+	font-family: 'Space Mono', monospace;
+}
+
+.mainText {
+	/*background-color: black;*/
+	color:black;
+	height:1.3em;
+	font-size: 1em;
+	padding: 5px;
+	margin-top: 16px;
+
+
+	
+}
+.mainTextP {
+	padding-left: 3px !important;
+}
+
+.mainTextP:hover{
+	background-color: red;
+	color:white;
+	padding-top: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	
+	
+}
+.clicky:hover {
+	color:white;
+	text-decoration:none;
+
+}
+.textBox {
+	max-width: 300px;
+	max-height: 400px;
+	overflow: auto;
+}
+
+.formBtn {
+	background-color: red;
+	color:white;
+    padding: 5px;
+    font-family: 'Space Mono', monospace;
+    border: none;
+}
+.itemBoxes {
+	padding:2px;
+}
+.itemImgBox {
+	width:100%;
+}
+
+
+
+
+.image {
+    position:relative;
+    width:100%;
+    
+}
+.image img {
+    width:100%;
+    vertical-align:top;
+}
+.image:after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.7);
+    opacity:1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.image:hover:after {
+    opacity:0.1;
+}
+
+
+
+
+
+@media only screen and (max-width: 450px) {
+    .topSpace {
+    	height:20vh;
+    }
+    .logo {
+		background-color: red;
+	    color: white;
+	    /*height: 1.3em;*/
+	    font-size: 1.8em;
+	    padding: 3px;
+	}
+	.clock {
+		
+		height:1.3em;
+		font-size: .em;
+		padding: 12px;
+	}
+	.mainText {
+		margin-top: 5px;
+		font-size: 1em;
+
+	}
+}
+
+@media only screen and (max-width: 750px) {
+    .topSpace {
+        height:10vh;
+    }
+    .clock {
+		
+		height:1.3em;
+		font-size: 1em;
+		padding: 12px;
+		margin-bottom: 10px;
+	}
+	.mainText {
+		margin-top: 8px;
+		font-size: 1em;
+
+	}
+	/*mobile makes images visible*/
+	.image:after {
+		opacity:0.1;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
