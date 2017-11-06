@@ -1,3 +1,9 @@
+
+
+
+
+
+
 document.getElementById("para1").innerHTML = formatAMPM();
 
 function formatAMPM() {
@@ -22,3 +28,10 @@ $(window).resize(function () {
             $("#textBoxDiv").removeClass("textBox");
     }
 });
+
+
+
+
+
+
+
